@@ -1,0 +1,16 @@
+<div>
+  <ng-container *ngIf="needUser then needUser else noResult"></ng-container>
+</div>
+
+<ng-template #needUser>
+  <ng-container *ngIf="!isUserlogged; else noResult;">
+    <h1>Veuillez vous connecter</h1>
+    <ion-button mode="ios" (click)="isvcAuth.showAuthModal()" expand="block" fill="clear" color="danger">
+      Se connecter
+    </ion-button>
+  </ng-container>
+</ng-template>
+
+<ng-template #noResult>
+  <h1>Pas de résultat</h1>
+</ng-template>

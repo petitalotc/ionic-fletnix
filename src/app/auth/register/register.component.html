@@ -1,0 +1,29 @@
+<div class="register-container">
+  <div>
+    <h1>S'inscrire</h1>
+
+    <form mode="md" [formGroup]="registerForm" (ngSubmit)="onSubmitForm()">
+      <ion-item>
+        <ion-label>Pseudo</ion-label>
+        <ion-input formControlName="pseudo" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>E-Mail</ion-label>
+        <ion-input formControlName="email" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mot de passe</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mot de passe</ion-label>
+        <ion-input formControlName="confirmPassword" type="password"></ion-input>
+      </ion-item>
+      <div class="submit-btn">
+        <ion-button mode="ios" shape="round" size="small" color="dark" type="submit" [disabled]="registerForm.invalid">
+          Valider
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</div>

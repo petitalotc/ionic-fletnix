@@ -1,0 +1,7 @@
+.close-btn {
+    position: absolute;
+    margin-top: var(--ion-safe-area-top, 0);
+    right: 0;
+    top: 10px;
+    z-index: 99;
+}

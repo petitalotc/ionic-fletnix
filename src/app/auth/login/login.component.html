@@ -1,0 +1,21 @@
+<div class="login-container">
+  <div>
+    <h1>Se connecter</h1>
+
+    <form mode="md" [formGroup]="loginForm" (ngSubmit)="onSubmitForm()">
+      <ion-item>
+        <ion-label>E-Mail</ion-label>
+        <ion-input formControlName="email" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mot de passe</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+      <div class="submit-btn">
+        <ion-button mode="ios" shape="round" size="small" color="dark" type="submit" [disabled]="loginForm.invalid">
+          Valider
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</div>

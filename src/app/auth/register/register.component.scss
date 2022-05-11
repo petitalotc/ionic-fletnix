@@ -1,0 +1,19 @@
+.register-container {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+
+    ion-button {
+        margin-top: 20px;
+    }
+}

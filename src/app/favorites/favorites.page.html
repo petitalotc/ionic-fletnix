@@ -1,0 +1,13 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="md">
+    <ion-title mode="ios">Favoris</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-item-vertical-list *ngIf="items?.length > 0; else noResult" [items]="items"></app-item-vertical-list>
+</ion-content>
+
+<ng-template #noResult>
+  <app-no-result [checkUser]="true"></app-no-result>
+</ng-template>

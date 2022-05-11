@@ -1,0 +1,7 @@
+<ion-content>
+    <app-close-modal-button></app-close-modal-button>
+    
+    <div *ngIf="itemDetail">
+        <app-item-preview [isModal]="true" [itemDetail]="itemDetail" [showInfos]="true"></app-item-preview>
+    </div>
+</ion-content>

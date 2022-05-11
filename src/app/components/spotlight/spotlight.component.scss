@@ -1,0 +1,58 @@
+.spotlight, .header {
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+    position: relative;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    h1 {
+        font-weight: bold;
+        color: white;
+        text-shadow: 0 0 8px rgb(0, 0, 0);
+    }
+}
+
+.gradient {
+    background: linear-gradient(#ffffff00 65%, #fff 100%);
+    width: 100%;
+    height: 100%;
+
+    .detail {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .action-buttons {
+        margin: auto;
+        display: flex;
+        width: fit-content;
+        justify-content: space-around;
+    }
+
+    .btn {
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 15px;
+    }
+}
+
+@media screen and (orientation:landscape){
+    .spotlight {
+        height: 85vh;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .gradient {
+        background: linear-gradient(#ffffff00 40%, #000 95%);
+    }
+}

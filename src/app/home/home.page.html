@@ -1,0 +1,25 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="md">
+    <ion-title>
+      <ion-img src="assets/icon/title.png"></ion-img>
+    </ion-title>
+    <ion-buttons class="right-btns" mode="ios" slot="end">
+      <ion-button color="dark" (click)="goToProfil()">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <app-spotlight [showInfos]="true" [item]="spotlightItem"></app-spotlight>
+
+  <div class="ion-padding">
+    <app-item-horizontal-list title="Films les plus populaires" [items]="popularMovies"></app-item-horizontal-list>
+    <app-item-horizontal-list title="Séries les plus populaires" [items]="popularSeries"></app-item-horizontal-list>
+    <app-item-horizontal-list title="Films en tendance cette semaine" [items]="trendingMovies"></app-item-horizontal-list>
+    <app-item-horizontal-list title="Séries en tendance cette semaine" [items]="trendingSeries"></app-item-horizontal-list>
+  </div>
+
+</ion-content>

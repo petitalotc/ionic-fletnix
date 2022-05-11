@@ -1,0 +1,7 @@
+{
+  "name": "Fletnix",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

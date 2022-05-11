@@ -1,0 +1,12 @@
+<ion-content>
+  <app-back-button></app-back-button>
+
+  <div *ngIf="itemDetail">
+    <app-item-preview [itemDetail]="itemDetail"></app-item-preview>
+    <div class="iframe-container ion-padding">
+      <div *ngFor="let video of itemDetail.videos" class="iframe">
+        <app-youtube-iframe [videoId]="video.key"></app-youtube-iframe>
+      </div>
+    </div>
+  </div>
+</ion-content>

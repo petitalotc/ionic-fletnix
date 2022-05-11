@@ -1,0 +1,14 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="md">
+    <ion-title mode="ios">Rechercher</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchItem()" debounce="500" placeholder="Titre d'un film/série" animated></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <app-item-vertical-list [title]="listTitle" [items]="items"></app-item-vertical-list>
+
+</ion-content>

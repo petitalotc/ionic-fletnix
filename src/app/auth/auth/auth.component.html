@@ -1,0 +1,32 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="isModal" class="close-btn" mode="ios" (click)="closeModal()" fill="clear" color="dark">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="logo">
+    <img src="assets/icon/title.png">
+  </div>
+  
+  <ng-container *ngIf="showRegisterPage; else registerPage">
+    <app-register [isModal]="isModal"></app-register>
+  </ng-container>
+
+  <ng-template #registerPage>
+    <app-login [isModal]="isModal"></app-login>
+  </ng-template>
+
+  <div class="btn">
+    <ion-button mode="ios" (click)="toggleAuthPage()" fill="clear" shape="round" color="dark">
+      {{ buttonText }}
+    </ion-button>
+    <ion-button *ngIf="!isModal" mode="ios" fill="clear" shape="round" color="danger" routerLink="/home">
+      Continuer sans s'authentifier
+    </ion-button>
+  </div>
+</ion-content>

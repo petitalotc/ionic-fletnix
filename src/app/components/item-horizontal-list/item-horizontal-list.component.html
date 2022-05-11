@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+
+<ion-slides [options]="slidesOptions">
+  <ion-slide *ngFor="let item of items">
+    <img (click)="showDetailModal(item)" [src]="item.poster_path">
+  </ion-slide>
+</ion-slides>

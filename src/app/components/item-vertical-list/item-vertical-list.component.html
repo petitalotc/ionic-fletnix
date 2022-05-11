@@ -1,0 +1,13 @@
+<ion-list>
+  <ion-list-header *ngIf="title" mode="ios">
+    <ion-label class="title">{{ title }}</ion-label>
+  </ion-list-header>
+    <ng-container *ngFor="let item of items" >
+      <ion-item *ngIf="item.backdrop_path || item.poster_path" (click)="goToDetail(item)">
+        <ion-thumbnail slot="start">
+          <ion-img #img [src]="item.backdrop_path || item.poster_path" (ionError)="img.src = ''"></ion-img>
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap">{{ item.title ? item.title : item.name }}</ion-label>
+      </ion-item>
+    </ng-container>
+</ion-list>

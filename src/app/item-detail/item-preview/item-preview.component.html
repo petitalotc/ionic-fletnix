@@ -1,0 +1,17 @@
+<div *ngIf="itemDetail">
+  <app-spotlight [item]="itemDetail" [isModal]="isModal" [showInfos]="showInfos"></app-spotlight>
+
+  <div class="detail">
+      <div class="providers">
+          <img *ngFor="let provider of itemDetail.providers" [src]="provider.logo_path">
+      </div>
+
+      <p class="date-time">{{ itemDetail.release_date | date: "YYYY"}} {{ itemDetail.runtime ? this.getHoursAndMinutes(itemDetail.runtime) : "" }}</p>
+      <div class="tags">
+          <ion-chip *ngFor="let genre of itemDetail.genres" color="danger"> 
+              <ion-label color="danger">{{ genre.name }}</ion-label>
+          </ion-chip>
+      </div>
+      <p class="description">{{ itemDetail.overview }}</p>
+  </div>
+</div>

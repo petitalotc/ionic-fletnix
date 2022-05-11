@@ -1,0 +1,35 @@
+<div [class]="isModal ? 'header' : 'spotlight'" *ngIf="item" [style]="'background-image: url(' + item.backdrop_path + ');'">
+  <div class="gradient">
+    <div class="detail">
+      <h1>{{ item.title ? item.title : item.name }}</h1>
+      <div class="action-buttons">
+        <div class="btn">
+          <ion-button fill="clear" shape="round" size="small" color="dark" (click)="toggleAddToWatchList(item)">
+            <ion-icon slot="icon-only" [name]="isInWatchList(item) ? 'checkmark-outline' : 'add'"></ion-icon>
+          </ion-button>
+          <span>À voir</span>
+        </div>
+        <div *ngIf="showInfos; else shareBtn" class="btn">
+          <ion-button fill="clear" shape="round" size="small" color="dark" (click)="goToDetail()">
+            <ion-icon slot="icon-only" name="information-outline"></ion-icon>
+          </ion-button>
+          <span>Infos</span>
+        </div>
+        <ng-template #shareBtn>
+          <div class="btn">
+            <ion-button fill="clear" shape="round" size="small" color="dark" (click)="share(item)">
+              <ion-icon slot="icon-only" name="share-outline"></ion-icon>
+            </ion-button>
+            <span>Partager</span>
+          </div>
+        </ng-template>
+        <div class="btn">
+          <ion-button fill="clear" shape="round" size="small" color="dark" (click)="toggleAddToFavorites(item)">
+            <ion-icon slot="icon-only" [name]="isFavorite(item) ? 'star' : 'star-outline'"></ion-icon>
+          </ion-button>
+          <span>Favoris</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+ion-toolbar {
+    --border-style: none;
+}
+
+.logo {
+    width: 200px;
+    margin: auto;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+}
+
+.close-btn {
+    margin-top: var(--ion-safe-area-top, 0);
+}
+
+@media screen and (max-width: 450px) {
+    .close-btn {
+        right: 6px;
+        top: 10px;
+    }
+}

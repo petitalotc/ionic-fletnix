@@ -1,0 +1,20 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title mode="ios">Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="user" class="ion-padding">
+    <h1>{{ user.displayName }}</h1>
+    <p>{{ user.email }}</p>
+    <p>État de la connexion : {{ isNetworkConnected ? "Connecté" : "Déconnecté" }}</p>
+
+    <ion-button mode="ios" (click)="signOut()" expand="block" fill="clear" color="danger">
+      Se déconnecter
+    </ion-button>
+  </div>
+</ion-content>
